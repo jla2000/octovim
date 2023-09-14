@@ -2,8 +2,10 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    config = true,
     main = "nvim-treesitter.configs",
+    config = true,
+    lazy = true,
+    event = "VeryLazy",
     opts = {
       -- A list of parser names, or "all" (the five listed parsers should always be installed)
       ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
